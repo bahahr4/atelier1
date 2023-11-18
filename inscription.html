@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <title>Inscription</title>
+  <style>
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="password"] {
+      width: 100%;
+      padding: 5px;
+    }
+    input[type="submit"] {
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <table>
+      <tr>
+        <td><a href="accueil.html">Accueil</a></td>
+        <td><a href="projets.html">Projets</a></td>
+        <td><a href="services.html">Services</a></td>
+        <td><a href="inscription.html">Inscription</a></td>
+      </tr>
+    </table>
+    <img src="https://i.imgur.com/DEnvkdc.png" alt="Logo de l'agence digitale" width="1450" height="300">
+  </header>
+
+  <h1>Inscription</h1>
+
+  <form>
+    <table>
+      <tr>
+        <td><label for="nom">Nom :</label></td>
+        <td><input type="text" id="nom" name="nom" required minlength="3" placeholder="Entrez votre nom (min. 3 caractères)"></td>
+      </tr>
+      <tr>
+        <td><label for="prenom">Prénom :</label></td>
+        <td><input type="text" id="prenom" name="prenom" required minlength="3" placeholder="Entrez votre prénom (min. 3 caractères)"></td>
+      </tr>
+      <tr>
+        <td><label for="adresse">Adresse :</label></td>
+        <td><input type="text" id="adresse" name="adresse" required placeholder="Entrez votre adresse"></td>
+      </tr>
+      <tr>
+        <td><label for="telephone">Numéro de téléphone :</label></td>
+        <td><input type="tel" id="telephone" name="telephone" required pattern="[0-9]{8}" placeholder="Entrez votre numéro de téléphone (8 chiffres)"></td>
+      </tr>
+      <tr>
+        <td><label for="date_naissance">Date de naissance :</label></td>
+        <td><input type="date" id="date_naissance" name="date_naissance" required placeholder="Sélectionnez votre date de naissance"></td>
+      </tr>
+      <tr>
+        <td><label for="email">Email :</label></td>
+        <td><input type="email" id="email" name="email" required pattern="[a-zA-Z0-9._%+-]+@gmail.com" placeholder="Entrez votre adresse email (something@gmail.com)"></td>
+      </tr>
+      <tr>
+        <td><label for="motdepasse">Mot de passe :</label></td>
+        <td><input type="password" id="motdepasse" name="motdepasse" required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$" placeholder="Entrez votre mot de passe, Il devrait inclure une combinaison de minuscules, majuscules, chiffres et symboles"></td>
+      </tr>
+      <tr>
+        <td><label for="confirmpassword">Confirmer le mot de passe :</label></td>
+        <td><input type="password" id="confirmpassword" name="confirmpassword" required placeholder="Confirmez votre mot de passe"></td>
+      </tr>
+    </table>
+  
+    <input type="submit" value="S'inscrire">
+  </form>
+</body>
+</html>
